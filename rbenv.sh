@@ -4,7 +4,7 @@
 
 # rbenvのインストール状態確認
 if [ $(which rbenv) ]; then
-  return;
+  return 2>&- || exit;
 fi
 
 # 必要なパッケージのインストール
